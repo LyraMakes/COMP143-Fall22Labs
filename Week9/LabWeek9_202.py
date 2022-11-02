@@ -1,8 +1,7 @@
-#!/usr/bin/env python3
 
 # Dictionaries:
 
-gabagool = {"color": "green", "points": 5}
+gabagool = {"color": "red", "points": 5}
 
 print(gabagool["color"])
 print(gabagool["points"])
@@ -20,19 +19,24 @@ gabagool2 = {}
 gabagool2["stuff"] = "others"
 
 
-gabagool3 = {'color': 'green', 'points': 5}
+gabagool3 = {'color': 'red', 'points': 5}
 print(gabagool3)
-# Change the alien's color and point value.
-gabagool3['color'] = 'yellow'
+gabagool3['color'] = 'pink'
 gabagool3['points'] = 10
 print(gabagool3)
 
 
 
-gabagool4 = {'color': 'green', 'points': 5}
+
+
+gabagool4 = {'color': 'red', 'points': 5}
 print(gabagool4)
 del gabagool4['points']
 print(gabagool4)
+
+
+
+# import sys; sys.exit(0)
 
 
 # Store people's favorite languages.
