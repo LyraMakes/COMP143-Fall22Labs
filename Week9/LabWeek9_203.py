@@ -1,7 +1,11 @@
 
 # Dictionaries:
 
-gabagool = {"color": "red", "points": 5}
+gabagool = {
+    "color": "red",
+    "points": 5,
+    4: "this"
+}
 
 print(gabagool["color"])
 print(gabagool["points"])
@@ -17,6 +21,8 @@ gabagool["position"] = "(23, 4)"
 
 gabagool2 = {}
 gabagool2["stuff"] = "others"
+# print(gabagool2[0])
+
 
 
 gabagool3 = {'color': 'red', 'points': 5}
@@ -33,10 +39,6 @@ gabagool4 = {'color': 'red', 'points': 5}
 print(gabagool4)
 del gabagool4['points']
 print(gabagool4)
-
-
-
-# import sys; sys.exit(0)
 
 
 # Store people's favorite languages.
@@ -60,10 +62,6 @@ for name in fav_languages.keys():
 for language in fav_languages.values():
     print(language)
 
-# Show each person's favorite language,
-# in reverse order by the person's name.
-for name in sorted(fav_languages.keys(), reverse=True):
-    print(f"{name}: language")
 
 num_responses = len(fav_languages)
 
@@ -86,12 +84,12 @@ new_user = {
     'username': 'mcurie',
 }
 users.append(new_user)
+
 # Show all information about each user.
 for user_dict in users:
     for k, v in user_dict.items():
         print(f"{k}: {v}")
-        print("\n")
-
+    print("\n")
 
 
 # Define a list of users, where each user
@@ -112,7 +110,7 @@ users = [
 for user_dict in users:
     for k, v in user_dict.items():
         print(f"{k}: {v}")
-        print("\n")
+    print("\n")
 
 # Store multiple languages for each person.
 fav_languages = {
@@ -157,6 +155,10 @@ squares = {}
 for x in range(5):
     squares[x] = x**2
 
+
+
+
+
 squares = {x: x**2 for x in range(5)}
 
 
@@ -164,7 +166,15 @@ group_1 = ['kai', 'abe', 'ada', 'gus', 'zoe']
 group_2 = ['jen', 'eva', 'dan', 'isa', 'meg']
 pairings = {name: name_2 for name, name_2 in zip(group_1, group_2)}
 
+# pairings = {
+#     'kai': 'jen',
+#     'abe': 'eva',
+#     'ada': 'dan',
+#     'gus': 'isa',
+#     'zoe': 'meg'
+# }
 
+# print(pairings)
 
 aliens = []
 # Make a million green aliens, worth 5 points
@@ -180,3 +190,6 @@ for alien_num in range(1000000):
 num_aliens = len(aliens)
 print("Number of aliens created:")
 print(num_aliens)
+
+print("Get Ready:")
+print(aliens)

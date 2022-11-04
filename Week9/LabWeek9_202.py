@@ -35,10 +35,6 @@ del gabagool4['points']
 print(gabagool4)
 
 
-
-# import sys; sys.exit(0)
-
-
 # Store people's favorite languages.
 fav_languages = {
  'jen': 'python',
@@ -60,10 +56,6 @@ for name in fav_languages.keys():
 for language in fav_languages.values():
     print(language)
 
-# Show each person's favorite language,
-# in reverse order by the person's name.
-for name in sorted(fav_languages.keys(), reverse=True):
-    print(f"{name}: language")
 
 num_responses = len(fav_languages)
 
