@@ -1,12 +1,3 @@
-import random
+import playsound
 
-prizes = {
-    "Goldfish": 2,
-    "Car": 60_000,
-    "Stuffed Animal": 100_000,
-    "Movie Tickets": 20
-}
-
-key, value = random.choice(prizes)
-
-print(f"Won a {key} worth {value}")
+playsound.playsound("C:/Users/c31brown/Downloads/preview_4.wav")
