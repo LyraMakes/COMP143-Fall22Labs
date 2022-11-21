@@ -11,7 +11,8 @@ import random
 
 
 def get_coffee_total(pounds):
-    pass
+    return round(1.50 + (10.50 + 0.86) * pounds, 2)
+
 
 # total_pounds = float(input("How many pounds of coffee would you like? "))
 # total_cost = get_coffee_total(total_pounds)
@@ -29,10 +30,21 @@ def get_coffee_total(pounds):
 
 
 def guessing_game():
-    pass
+    rand_int = random.randint(1, 10)
+    while True:
+        guess = int(input("Enter a guess [1-10]: "))
+
+        if guess == rand_int:
+            break
+        elif guess > rand_int:
+            print("Lower!")
+        else:
+            print("Higher!")
+
+    print("You got it!")
 
 
-# guessing_game()
+guessing_game()
 
 # MinMax-ing
 # Write a function to calculate the maximum
