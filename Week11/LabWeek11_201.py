@@ -44,7 +44,7 @@ def guessing_game():
     print("You got it!")
 
 
-guessing_game()
+# guessing_game()
 
 # MinMax-ing
 # Write a function to calculate the maximum
@@ -54,11 +54,40 @@ guessing_game()
 
 
 def print_max_min(nums):
-    pass
+    cur_min = 999999999999
+    cur_max = -999999999999
+
+    for num in nums:
+        if num < cur_min:
+            cur_min = num
+        if num > cur_max:
+            cur_max = num
+
+    print(f"Maximum: {cur_max}")
+    print(f"Minimum: {cur_min}")
 
 
-# print_max_min([2, 6, 423, -100, 1, 2, 3, 423])
+# print_max_min([1, 2, 17, -8, 12.2, 3, 0, 4])
 
 
 def get_max_min():
-    pass
+    cur_min = 999999999999
+    cur_max = -999999999999
+
+    while True:
+        num = input("Enter a integer (q to quit): ")
+
+        if num == "q":
+            break
+        num = int(num)
+
+        if num < cur_min:
+            cur_min = num
+        if num > cur_max:
+            cur_max = num
+
+    print(f"Maximum: {cur_max}")
+    print(f"Minimum: {cur_min}")
+
+
+get_max_min()
