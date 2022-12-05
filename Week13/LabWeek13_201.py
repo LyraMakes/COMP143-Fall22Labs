@@ -24,6 +24,7 @@ class Dog:
         return self.name == other.name and self.age == other.age
 
 
+
 # You will create objects based on the classes (using the __init__ method)
 myDog = Dog("Luna", 4)
 myDog2 = Dog("Luna", 4)
@@ -74,9 +75,14 @@ class DogOwner:
     def __str__(self):
         return f"DogOwner(name=\"{self.name}\", len(dogs)={len(self.dogs)})"
 
+    def __contains__(self, item):
+        return item in self.dogs
+
 
 myOwner = DogOwner("Lyra")
-myOwner.adopt(Dog("Darby", 4))
+
+darby = Dog("Darby", 4)
+myOwner.adopt(darby)
 myOwner.adopt(Dog("RJ", 2))
 
 myOwner.show_dogs()
@@ -85,3 +91,4 @@ print(f"Dog owner: {myOwner.name}")
 
 print(myDog)
 print(myOwner)
+print(darby in myOwner)
