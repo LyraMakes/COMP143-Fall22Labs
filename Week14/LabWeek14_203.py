@@ -51,4 +51,5 @@ def main():
     if (count != 0):
         print("Result: ", total / count)
 
+
 main()
