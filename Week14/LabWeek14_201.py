@@ -1,19 +1,24 @@
 # Write a function that reads a column of numbers from a file,
 # calculates the average, and writes the average to a file.
 
-# def process_file():
-#     with open("content.txt", "r") as in_file:
-#         content = in_file.readlines()
-#
-#     total = 0
-#
-#     for line in content:
-#         total += float(line)
-#
-#     average = total / len(content)
-#
-#     with open("output.txt", "w") as out_file:
-#         out_file.write(f"{average}")
+
+def process():
+    with open("content.txt", "r") as infile:
+        content = infile.readlines()
+
+    num = len(content)
+
+    total = 0
+    for line in content:
+        total += float(line.strip())
+
+    average = total / num
+
+    with open("output.txt", "w") as outfile:
+        outfile.write(f"{average}")
+
+
+process()
 
 
 # Use recursion to generate a Collatz sequence from a user-specified positive number.
@@ -26,13 +31,15 @@
 
 def collatz(num):
     print(num)
-    if (num % 2 == 0):
+
+    if num % 2 == 0:
         collatz(num / 2)
-    elif (num > 1):
+    elif num > 1:
         collatz((3 * num) + 1)
 
 
-# print(collatz(17))
+# collatz(5)
+
 
 
 # (a) Without using a computer, predict the output of this code, given user input values of your choice.
@@ -49,8 +56,8 @@ def main():
         total = total + float(x)
         count += 1
         x = input("Enter a number (q for quit) ")
-    if (count != 0):
+    if count != 0:
         print("Result: ", total / count)
 
 
-# main()
+main()
